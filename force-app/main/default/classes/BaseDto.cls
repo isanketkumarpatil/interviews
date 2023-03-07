@@ -3,6 +3,7 @@ public with sharing abstract class BaseDto {
   public static final String OPERATION_TYPE_UPDATE = 'update';
   public static final String OPERATION_TYPE_DELETE = 'delete';
 
+  @AuraEnabled
   public SObject sObj;
 
   public BaseDto() {
@@ -18,6 +19,7 @@ public with sharing abstract class BaseDto {
 
   @AuraEnabled
   public Id id { get; set; }
+  
   @AuraEnabled
   public String name { get; set; }
 

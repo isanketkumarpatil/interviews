@@ -5,4 +5,8 @@
 
 import { LightningElement } from "lwc";
 
-export default class QuoteTotalSummary extends LightningElement {}
+export default class QuoteTotalSummary extends LightningElement {
+    showAdjustQuoteDialog(){
+        this.dispatchEvent(new CustomEvent('showdialog'));
+    }
+}
